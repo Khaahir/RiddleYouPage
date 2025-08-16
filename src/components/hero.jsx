@@ -6,7 +6,7 @@ export default function Hero() {
 <section className='mt-2'>
   <img
     class="w-full h-180 object-strech"
-    src="public/Hero.png"
+    src="Hero.png"
     alt="Hero image"
   />
 </section>
