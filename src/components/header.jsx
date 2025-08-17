@@ -40,7 +40,7 @@ export default function Header() {
       {/* Top bar */}
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         <a href="#" className="flex items-center gap-2">
-          <img className="h-12 w-auto sm:h-16" src="riddleUlogo.png" alt="logo" />
+          <img className="h-20 w-auto sm:h-20" src="riddleUlogo.png" alt="logo" />
         </a>
 
         {/* Desktop nav */}
