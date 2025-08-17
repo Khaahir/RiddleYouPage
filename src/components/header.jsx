@@ -2,12 +2,13 @@ import React from 'react'
 
 function Header() {
   return (
-    <section className='mt-2 text-2xl'>
+    <section className='text-2xl  bg-[#011F3B] text-white p-3'>
         <div className=' flex justify-between items-center  '>
-            <img className='h-20 ml-3' src="pjdig.png" alt="" />
-            <span>Hem</span>
+            <img className='h-20 ml-3' src="riddleUlogo.png" alt="logo" />
             <span>Om</span>
-            <span className='mr-10'>Ladda ner</span>
+            <span>Vart</span>
+            <span className='mr-10'>Event</span>
+            <span className='mr-10'>Kontakt</span>
         </div>
 
     </section>

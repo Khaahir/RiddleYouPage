@@ -3,7 +3,7 @@ import React from 'react'
 export default function Hero() {
   return (
     
-<section className='mt-2'>
+<section>
   <img
     class="w-full h-180 object-strech"
     src="Hero.png"
