@@ -52,6 +52,7 @@ function Footer() {
           <div className="flex gap-3 flex-wrap justify-center md:justify-end">
             <img className="h-40 sm:h-40" src="appstore.svg" alt="App Store" />
             <img className="h-40 sm:h-40" src="googleplay.svg" alt="Google Play" />
+            <p>kommer snart!</p>
           </div>
         </div>
       </div>

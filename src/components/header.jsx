@@ -36,15 +36,15 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-[#011F3B] text-white">
+    <header className="bg-[#001D39] text-white">
       {/* Top bar */}
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         <a href="#" className="flex items-center gap-2">
-          <img className="h-20 w-auto sm:h-20" src="riddleUlogo.png" alt="logo" />
+          <img className="h-30 w-auto sm:h-" src="riddleUlogo.png" alt="logo" />
         </a>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-30 md:flex">
           {navItems.map((item) => (
             <a
               key={item.label}
@@ -94,7 +94,7 @@ export default function Header() {
               key={item.label}
               href={item.href}
               onClick={() => setOpen(false)}
-              className="block rounded-xl px-3 py-3 text-base hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/60"
+              className="block rounded-xl px- py-3 text-base hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/60"
             >
               {item.label}
             </a>
