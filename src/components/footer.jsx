@@ -21,10 +21,10 @@ function Footer() {
           <p className="text-sm">
             ✉️ Mail:{" "}
             <a
-              href="mailto:support@riddleyou.com"
+              href="mailto:riddleyouinfo@gmail.com"
               className="underline hover:text-white"
             >
-              support@riddleyou.com
+              riddleyouinfo@gmail.com
             </a>
           </p>
         </div>
