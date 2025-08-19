@@ -108,7 +108,7 @@ export default function EventPage({ contactHref = "#contact" }: { contactHref?: 
       <section id="packages" className="mx-auto max-w-7xl px-6 py-12 sm:py-16">
         <h2 className="text-center text-3xl font-extrabold">Paket</h2>
         <p className="mx-auto mt-2 max-w-2xl text-center text-white/75">
-          Alla paket kan skräddarsys efter era behov – tema, frågor, plats och upplägg tar vi fram tillsammans.
+          Alla paket kan skräddarsys efter era behov  tema, frågor, plats och upplägg tar vi fram tillsammans.
         </p>
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           {[
