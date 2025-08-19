@@ -4,18 +4,18 @@ import { Sparkles, MapPin, Gift, Share2, Compass, Puzzle, Lock } from "lucide-re
 function HowTo() {
   return (
     
-    <section className="w-full px-6 py-12 
+    <section  className="w-full px-6 py-12 
   bg-gradient-to-b from-blue-50 via-white to-blue-50 
   bg-[url('')] bg-cover bg-center text-white">
       
       <div className="flex justify-center mb-10">
-        <h1 className="text-3xl sm:text-4xl font-extrabold flex items-center gap-2">
+        <h2 className="text-3xl sm:text-3xl font-extrabold flex items-center gap-2">
           HUR MAN SPELAR
-        </h1>
+        </h2>
       </div>
 
       {/* Steg */}
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 mb-16">
+      <div   className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 mb-16">
         <div className="p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition flex flex-col items-center text-center">
           <MapPin className="h-10 w-10 text-blue-500 mb-3" />
           <h2 className="text-xl font-semibold mb-2">1. Ladda ner appen</h2>
@@ -72,7 +72,7 @@ function HowTo() {
           </p>
         </div>
       </div>
-<section className="flex flex-col items-center text-center justify-center my-16 px-6">
+<section  className="flex flex-col items-center text-center justify-center my-20 px-6">
   
   <div className="flex flex-col lg:flex-row items-center max-w-5xl">
     <img 
@@ -80,9 +80,11 @@ function HowTo() {
       src="where.png" 
       alt="Karta över lanseringsstäder" 
     />
-    
+   
     <p className="text-lg leading-relaxed max-w-xl text-gray-200">
-  <h2 className="text-4xl font-extrabold mb-10 tracking-wide">VART</h2>
+
+
+  <h2  className="text-3xl font-extrabold mb-10 tracking-wide">VART</h2>
       Vår tjänst är ännu inte lanserad, men den kommer att släppas först i 
       <span className="font-semibold"> Kristinehamn, Karlskoga, Karlstad</span> och 
       <span className="font-semibold"> Örebro</span>. Därefter planerar vi att stegvis expandera till fler städer. 

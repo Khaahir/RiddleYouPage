@@ -2,7 +2,7 @@ import React from 'react'
 
 function About() {
   return (
-    <section className="flex flex-col items-center w- py-16 px-6 bg-[#021118] text-white">
+    <section id='om' className="flex flex-col items-center w- py-16 px-6 bg-[#021118] text-white">
       <div className="max-w-3xl text-center">
         <h1 className="text-3xl md:text-4xl font-bold mb-6 ">
           Om oss

@@ -16,7 +16,7 @@ function Footer() {
         </div>
 
         {/* Column 2 - Kontakt */}
-        <div className="space-y-3 text-center md:text-left">
+        <div id="kontakt" className="space-y-3 text-center md:text-left">
           <h3 className="text-lg font-semibold text-white mb-2">Kontakt</h3>
           <p className="text-sm">
             ✉️ Mail:{" "}
@@ -30,7 +30,7 @@ function Footer() {
         </div>
 
         {/* Column 3 - Social & Store-links */}
-        <div className="flex flex-col items-center md:items-end space-y-4">
+        <div id="kontakt" className="flex flex-col items-center md:items-end space-y-4">
           <div className="flex space-x-4">
             <a
               href="https://www.facebook.com/profile.php?id=61578843456515"
