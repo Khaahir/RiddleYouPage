@@ -143,7 +143,6 @@ export default function EventPage({ contactHref = "#contact" }: { contactHref?: 
                 "20–25 frågor med bild & quiz",
                 "Personliga inslag (kollega-/tema)",
                 "Avatarer & anpassad grafik",
-                "Vinster till vinnarlaget",
               ],
               details:
                 "Rekommenderas för företag eller större grupper där man vill ha extra personliga inslag och högre interaktivitet.",
