@@ -68,7 +68,7 @@ export default function EventPage({ contactHref = "#contact" }: { contactHref?: 
             { title: "Kommuner & organisationer", body: "Aktiviteter för större grupper och friluftsdagar." },
             { title: "Barnkalas", body: "Lekfulla skattjakter med barnvänliga teman och enkla uppdrag." },
             { title: "Friluftsdagar", body: "Perfekt för skolor och föreningar som vill ha en utomhusaktivitet." },
-            { title: "Kickoff & konferens", body: "Kombinera er konferens med en kreativ teambuilding-aktivitet." },
+            { title: "Konferens", body: "Kombinera er konferens med en kreativ teambuilding-aktivitet." },
             { title: "Turism & besökare", body: "Unik sightseeing-upplevelse med interaktiva moment." },
           ].map((it) => (
             <div
@@ -90,9 +90,7 @@ export default function EventPage({ contactHref = "#contact" }: { contactHref?: 
             {[
               "Vi skräddarsyr tema, rutt och frågor efter era mål.",
               "Endast ert sällskap får tillgång till eventet i appen.",
-              "Varje deltagare skapar egen inloggning (vi guidar).",
-              "Bilder, ledtrådar, quiz och avatarer – allt är möjligt.",
-              "Poängtavla i realtid och vinster till vinnarna.",
+              "Bilder, ledtrådar, quiz och avatarer allt är möjligt.",
               "Support före och under eventet.",
             ].map((t) => (
               <li key={t} className="flex items-start gap-2">
@@ -117,7 +115,7 @@ export default function EventPage({ contactHref = "#contact" }: { contactHref?: 
               meta: "Upp till 15 barn • 45–60 min",
               features: [
                 "Barnvänliga teman (pirater, superhjältar, sagor)",
-                "10 roliga uppdrag & quizfrågor",
+                "5-10 roliga uppdrag & quizfrågor",
                 "Enkla ledtrådar & bilder",
                 "Diplom till alla barn",
               ],
