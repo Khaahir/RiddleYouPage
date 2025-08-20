@@ -8,7 +8,7 @@ function HowTo() {
   bg-gradient-to-b from-blue-50 via-white to-blue-50 
   bg-[url('')] bg-cover bg-center text-white">
       
-      <div className="flex justify-center mb-10">
+      <div id="hur" className="flex justify-center mb-10">
         <h2 className="text-3xl sm:text-3xl font-extrabold flex items-center gap-2">
           HUR MAN SPELAR
         </h2>
@@ -45,7 +45,7 @@ function HowTo() {
       </div>
 
       {/* Nivåval */}
-      <div className="flex justify-center mb-8">
+      <div  className="flex justify-center mb-8">
         <h2 className="text-3xl font-bold">VÄLJ DITT ÄVENTYR</h2>
       </div>
 
