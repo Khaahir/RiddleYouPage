@@ -1,5 +1,7 @@
 import React from "react";
 import { Facebook, Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
+import RiddleYouPrivacyPolicy from "./policy";
 
 function Footer() {
   return (
@@ -27,6 +29,11 @@ function Footer() {
               riddleyouinfo@gmail.com
             </a>
           </p>
+            <div className="flex flex-col">
+          <Link to={"/policy"}>Policy</Link>
+          <Link to={"/terms"}>Terms and agreements</Link>
+          <Link to={"faq"}>FAQ</Link>
+            </div>
         </div>
 
         {/* Column 3 - Social & Store-links */}
@@ -46,6 +53,8 @@ function Footer() {
             >
               <Instagram className="w-7 h-7 hover:text-white" />
             </a>
+
+            
           </div>
 
           {/* Store Badges */}
