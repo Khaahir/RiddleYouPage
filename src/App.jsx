@@ -9,7 +9,7 @@ import HowTo from "./components/howTo";
 import UnderDevelopmentModal from "./components/Develop";
 import EventPage from "./components/Events";
 import RiddleYouPrivacyPolicy from "./components/policy";
-import RiddleYouTermsOfUse from "./components/terms"
+import RiddleYouTermsOfUse from "./components/terms";
 import RiddleYouFAQWeb from "./components/faq";
 
 export default function App() {
@@ -33,11 +33,8 @@ export default function App() {
         />
 
         <Route path="/events" element={<EventPage />} />
-
         <Route path="/policy" element={<RiddleYouPrivacyPolicy />} />
-
         <Route path="/terms" element={<RiddleYouTermsOfUse />} />
-
         <Route path="/faq" element={<RiddleYouFAQWeb />} />
       </Routes>
 
