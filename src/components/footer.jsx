@@ -1,7 +1,7 @@
 import React from "react";
 import { Facebook, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
-import RiddleYouPrivacyPolicy from "./policy";
+import RiddleYouPrivacyPolicy from "./Policy"
 
 function Footer() {
   return (

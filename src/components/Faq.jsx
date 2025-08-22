@@ -1,17 +1,7 @@
 import React, { useState } from "react";
 import { ChevronDown, Mail, HelpCircle } from "lucide-react";
 
-/**
- * Riddle You – FAQ (Web)
- * Stack: React + Tailwind CSS (framework-agnostic)
- *
- * Usage:
- *  - Place images under /public/images (Next.js) or /public (CRA/Vite) and update src paths if needed.
- *  - Drop this component into your project (e.g., pages/faq.tsx or a route component).
- *  - Includes basic SEO (JSON-LD) + accessible accordion behavior.
- */
-
-const faqData: { question: string; answer: string }[] = [
+const faqData = [
   {
     question: "Hur fungerar skattjakten i appen?",
     answer:
@@ -85,14 +75,13 @@ const faqData: { question: string; answer: string }[] = [
 ];
 
 export default function RiddleYouFAQWeb() {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [activeIndex, setActiveIndex] = useState(null);
   const contactEmail = "riddleyouinfo@gmail.com";
 
-  const toggle = (index: number) => {
+  const toggle = (index) => {
     setActiveIndex((prev) => (prev === index ? null : index));
   };
 
-  // Build JSON-LD for FAQPage
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -125,14 +114,16 @@ export default function RiddleYouFAQWeb() {
           </div>
 
           <a
-            href={`mailto:${contactEmail}?subject=${encodeURIComponent("Supportförfrågan")}&body=${encodeURIComponent("Hej! Jag behöver hjälp med...")}`}
+            href={`mailto:${contactEmail}?subject=${encodeURIComponent(
+              "Supportförfrågan"
+            )}&body=${encodeURIComponent("Hej! Jag behöver hjälp med...")}`}
             className="rounded-full bg-gray-900 px-4 py-2 text-sm font-medium text-white shadow hover:opacity-90"
           >
             Kontakta oss
           </a>
         </header>
 
-        {/* Hero Images (optional) */}
+        {/* Hero Images */}
         <div className="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
           <div className="col-span-2 overflow-hidden rounded-2xl bg-white shadow">
             <img
@@ -167,12 +158,16 @@ export default function RiddleYouFAQWeb() {
                   >
                     <span className="text-base font-semibold text-gray-900">{item.question}</span>
                     <ChevronDown
-                      className={`h-5 w-5 transition-transform ${open ? "rotate-180" : "rotate-0"}`}
+                      className={`h-5 w-5 transition-transform ${
+                        open ? "rotate-180" : "rotate-0"
+                      }`}
                       aria-hidden="true"
                     />
                   </button>
                   {open && (
-                    <div className="border-t px-5 py-4 text-sm leading-6 text-gray-700">{item.answer}</div>
+                    <div className="border-t px-5 py-4 text-sm leading-6 text-gray-700">
+                      {item.answer}
+                    </div>
                   )}
                 </div>
               );
@@ -183,7 +178,9 @@ export default function RiddleYouFAQWeb() {
         {/* Footer CTA */}
         <div className="mt-10 flex items-center justify-center">
           <a
-            href={`mailto:${contactEmail}?subject=${encodeURIComponent("Supportförfrågan")}&body=${encodeURIComponent("Hej! Jag behöver hjälp med...")}`}
+            href={`mailto:${contactEmail}?subject=${encodeURIComponent(
+              "Supportförfrågan"
+            )}&body=${encodeURIComponent("Hej! Jag behöver hjälp med...")}`}
             className="inline-flex items-center gap-2 rounded-full border border-gray-900 bg-white px-5 py-3 text-sm font-semibold text-gray-900 shadow hover:bg-gray-50"
           >
             <Mail className="h-4 w-4" /> Kontakta support

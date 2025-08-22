@@ -3,14 +3,14 @@ import { Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import MainContent from "./components/MainContent";
-import Footer from "./components/footer";
-import HowTo from "./components/howTo";
-import UnderDevelopmentModal from "./components/Develop";
-import EventPage from "./components/Events";
-import RiddleYouPrivacyPolicy from "./components/policy";
-import RiddleYouTermsOfUse from "./components/terms";
-import RiddleYouFAQWeb from "./components/faq";
+import MainContent from "./components/mainContent";
+import Footer from "./components/Footer";
+import HowTo from "./components/HowTo";
+import UnderDevelopmentModal from "./components/develop";
+import EventPage from "./components/events";
+import RiddleYouPrivacyPolicy from "./components/Policy";
+import RiddleYouTermsOfUse from "./components/Terms";
+import RiddleYouFAQWeb from "./components/Faq";
 
 export default function App() {
   return (

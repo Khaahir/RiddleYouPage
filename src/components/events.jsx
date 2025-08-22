@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 
-export default function EventPage({ contactHref = "#contact" }: { contactHref?: string }) {
-  const [status, setStatus] = useState<string>("");
-  const [expanded, setExpanded] = useState<string | null>(null);
-  const [selectedPackage, setSelectedPackage] = useState<string>("");
+export default function EventPage({ contactHref = "#contact" }) {
+  const [status, setStatus] = useState("");
+  const [expanded, setExpanded] = useState(null);
+  const [selectedPackage, setSelectedPackage] = useState("");
 
-  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function onSubmit(e) {
     e.preventDefault();
     const form = e.currentTarget;
-    const hp = (form.elements.namedItem("website") as HTMLInputElement)?.value;
+    const hp = form.elements.namedItem("website")?.value;
     if (hp) return; // honeypot
 
     if (!form.checkValidity()) {
@@ -153,12 +153,12 @@ export default function EventPage({ contactHref = "#contact" }: { contactHref?: 
               className="relative rounded-3xl border border-white/10 bg-white/5 p-6 shadow-sm backdrop-blur-sm"
             >
               {card.badge && (
-                <span className="absolute right-4 top-4 rounded-full bg-[var(--brand)]/90 px-3 py-1 text-xs font-bold text-black/90">
+                <span className="absolute right-4 top-4 rounded-full bg-[var(--brand)]/90 px-3 py-1 text-xs font-bold text.black/90">
                   {card.badge}
                 </span>
               )}
               <h3 className="text-2xl font-bold text-[var(--brand)]">{card.name}</h3>
-              <p className="text-sm text-white/70">{card.meta}</p>
+              <p className="text-sm text.white/70">{card.meta}</p>
               <ul className="mt-4 space-y-2">
                 {card.features.map((f) => (
                   <li key={f} className="flex gap-2 text-white/85">
@@ -332,15 +332,7 @@ export default function EventPage({ contactHref = "#contact" }: { contactHref?: 
   );
 }
 
-function Field({
-  label,
-  id,
-  children,
-}: {
-  label: string;
-  id: string;
-  children: React.ReactNode;
-}) {
+function Field({ label, id, children }) {
   return (
     <label htmlFor={id} className="block text-sm font-medium text-white/90">
       <span>{label}</span>
