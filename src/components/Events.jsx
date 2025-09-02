@@ -1,29 +1,8 @@
 import React, { useState } from "react";
 
 export default function EventPage({ contactHref = "#contact" }) {
-  const [status, setStatus] = useState("");
   const [expanded, setExpanded] = useState(null);
   const [selectedPackage, setSelectedPackage] = useState("");
-
-  async function onSubmit(e) {
-    e.preventDefault();
-    const form = e.currentTarget;
-    const hp = form.elements.namedItem("website")?.value;
-    if (hp) return; // honeypot
-
-    if (!form.checkValidity()) {
-      setStatus("Kolla markerade fält och försök igen.");
-      return;
-    }
-
-    const formData = new FormData(form);
-    if (selectedPackage) formData.set("package", selectedPackage);
-
-    console.log("Event form payload →", Object.fromEntries(formData.entries()));
-    setStatus("Tack! Vi återkommer inom 1–2 arbetsdagar.");
-    form.reset();
-    setSelectedPackage("");
-  }
 
   return (
     <main className="min-h-screen bg-[#001D39] text-white">
@@ -38,7 +17,7 @@ export default function EventPage({ contactHref = "#contact" }) {
             </h1>
             <p className="mt-4 max-w-2xl text-lg text-white/80">
               Gör nästa kickoff, födelsedag eller friluftsdag oförglömlig med en
-              helt anpassad upplevelse  tema, frågor, rutter och avatarer byggda efter era önskemål.
+              helt anpassad upplevelse – tema, frågor, rutter och avatarer byggda efter era önskemål.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <a
@@ -90,7 +69,7 @@ export default function EventPage({ contactHref = "#contact" }) {
             {[
               "Vi skräddarsyr tema, rutt och frågor efter era mål.",
               "Endast ert sällskap får tillgång till eventet i appen.",
-              "Bilder, ledtrådar, quiz och avatarer allt är möjligt.",
+              "Bilder, ledtrådar, quiz och avatarer – allt är möjligt.",
               "Support före och under eventet.",
             ].map((t) => (
               <li key={t} className="flex items-start gap-2">
@@ -106,7 +85,7 @@ export default function EventPage({ contactHref = "#contact" }) {
       <section id="packages" className="mx-auto max-w-7xl px-6 py-12 sm:py-16">
         <h2 className="text-center text-3xl font-extrabold">Paket</h2>
         <p className="mx-auto mt-2 max-w-2xl text-center text-white/75">
-          Alla paket kan skräddarsys efter era behov  tema, frågor, plats och upplägg tar vi fram tillsammans.
+          Alla paket kan skräddarsys efter era behov – tema, frågor, plats och upplägg tar vi fram tillsammans.
         </p>
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           {[
@@ -153,12 +132,12 @@ export default function EventPage({ contactHref = "#contact" }) {
               className="relative rounded-3xl border border-white/10 bg-white/5 p-6 shadow-sm backdrop-blur-sm"
             >
               {card.badge && (
-                <span className="absolute right-4 top-4 rounded-full bg-[var(--brand)]/90 px-3 py-1 text-xs font-bold text.black/90">
+                <span className="absolute right-4 top-4 rounded-full bg-[var(--brand)]/90 px-3 py-1 text-xs font-bold text-black/90">
                   {card.badge}
                 </span>
               )}
               <h3 className="text-2xl font-bold text-[var(--brand)]">{card.name}</h3>
-              <p className="text-sm text.white/70">{card.meta}</p>
+              <p className="text-sm text-white/70">{card.meta}</p>
               <ul className="mt-4 space-y-2">
                 {card.features.map((f) => (
                   <li key={f} className="flex gap-2 text-white/85">
@@ -176,7 +155,7 @@ export default function EventPage({ contactHref = "#contact" }) {
                   {expanded === card.name ? "Visa mindre" : "Se detaljer"}
                 </button>
                 <a
-                  href={contactHref}
+                  href="#contact"
                   onClick={() => setSelectedPackage(card.name)}
                   className="rounded-xl border border-white/20 px-4 py-2 font-semibold text-white/90 hover:bg-white/5"
                 >
@@ -201,10 +180,15 @@ export default function EventPage({ contactHref = "#contact" }) {
         </div>
 
         <form
+          name="event-request"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="website"
+          action="/thanks"
           className="space-y-6 rounded-3xl border border-white/10 bg-white/5 p-6"
-          onSubmit={onSubmit}
-          noValidate
         >
+          <input type="hidden" name="form-name" value="event-request" />
+
           {/* honeypot */}
           <div className="absolute -left-[9999px] h-0 w-0 overflow-hidden">
             <label>
@@ -318,8 +302,6 @@ export default function EventPage({ contactHref = "#contact" }) {
             <span>Jag godkänner att mina uppgifter används för att kontakta mig.</span>
           </label>
 
-          {/* Status & knapp */}
-          {status && <p className="text-sm text-white/70">{status}</p>}
           <button
             type="submit"
             className="rounded-xl bg-[var(--brand)] px-6 py-3 font-semibold text-black/90 shadow hover:brightness-95"

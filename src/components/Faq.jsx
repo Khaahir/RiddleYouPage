@@ -96,10 +96,7 @@ export default function RiddleYouFAQWeb() {
     <main className="min-h-screen bg-gray-50 text-gray-900">
       <div className="mx-auto w-full max-w-4xl px-4 pb-20 pt-10 sm:px-6 lg:px-8">
         {/* SEO JSON-LD */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+  
 
         {/* Header */}
         <header className="mb-8 flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
@@ -123,23 +120,6 @@ export default function RiddleYouFAQWeb() {
           </a>
         </header>
 
-        {/* Hero Images */}
-        <div className="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
-          <div className="col-span-2 overflow-hidden rounded-2xl bg-white shadow">
-            <img
-              src="/images/helplady.png"
-              alt="Hjälpillustration"
-              className="h-56 w-full object-contain"
-            />
-          </div>
-          <div className="overflow-hidden rounded-2xl bg-white shadow">
-            <img
-              src="/images/question.png"
-              alt="Frågetecken"
-              className="h-56 w-full object-contain"
-            />
-          </div>
-        </div>
 
         {/* FAQ list */}
         <section aria-labelledby="faq-heading">
