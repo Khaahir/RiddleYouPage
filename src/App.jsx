@@ -3,11 +3,10 @@ import { Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import MainContent from "./components/mainContent";
+import MainContent from "./components/MainContent";
 import Footer from "./components/Footer";
 import HowTo from "./components/HowTo";
-import UnderDevelopmentModal from "./components/develop";
-import EventPage from "./components/Events"
+import EventPage from "./components/EventsPage"
 import RiddleYouPrivacyPolicy from "./components/Policy";
 import RiddleYouTermsOfUse from "./components/Terms";
 import RiddleYouFAQWeb from "./components/Faq";
