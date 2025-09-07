@@ -59,7 +59,7 @@ function HowTo() {
 
   <h2  className="text-3xl font-extrabold mb-10 tracking-wide">VART</h2>
       Vår tjänst är ännu inte lanserad, men den kommer att släppas först i 
-      <span className="font-semibold"> Kristinehamn, Karlskoga, Karlstad</span> och 
+      <span className="font-semibold"> Kristinehamn, Karlskoga, Karlstad, Stockholm , Göteborg , Örebro</span> och 
       <span className="font-semibold"> Örebro</span>. Därefter planerar vi att stegvis expandera till fler städer. 
       <br /><br />
       Målet är att successivt göra tjänsten tillgänglig i hela regionen  och på sikt även nationellt. 
