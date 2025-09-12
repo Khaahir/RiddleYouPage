@@ -62,7 +62,7 @@ function HowTo() {
       <span className="font-semibold"> Kristinehamn, Karlskoga, Karlstad, Stockholm , Göteborg , Örebro</span> 
       <span className="font-semibold"> </span>. Därefter planerar vi att stegvis expandera till fler städer. 
       <br /><br />
-      Målet är att successivt göra tjänsten tillgänglig i hela regionen  och på sikt även nationellt. 
+      Målet är att successivt göra tjänsten tillgänglig i hela landet och på sikt även nationellt. 
       <span className="italic"> Håll utkik efter lanseringsdatumet, kanske är din stad nästa!</span>
     </p>
   </div>
